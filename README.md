@@ -44,7 +44,7 @@ chmod +x kops-linux-amd64
 sudo mv kops-linux-amd64 /usr/local/bin/kops
 ```
 
-### Provide the below permissions to your IAM user. If you are using the admin user, the below permissions are available by default
+### Provide the below permissions to your IAM user. If you are using the admin user, the below permissions are available by default 
 
 1. AmazonEC2FullAccess
 2. AmazonS3FullAccess
@@ -76,8 +76,8 @@ kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-stora
 ```
 kops edit cluster myfirstcluster.k8s.local
 ```
-
-Step 12: Build the cluster
+Note = .K8s.local is local domain. In organization they buy some domain godaddy, or other places and these domain we configure in route 53 using command aws route53 create-hosted-zone --name dev.example.com --caller-reference 1. Just change the example.com to domain name like amazon.com
+Step 12: Build the cluster 
 
 ```
 kops update cluster demok8scluster.k8s.local --yes --state=s3://kops-abhi-storage
